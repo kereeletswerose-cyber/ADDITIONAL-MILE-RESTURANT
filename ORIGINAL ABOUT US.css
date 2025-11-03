@@ -1,0 +1,258 @@
+<style>
+  /* Reset some default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Header styles (from your provided code) */
+header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  position: relative;
+}
+/* Styles for the menu icon */
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  padding: 8px;
+  transition: color 0.3s, transform 0.3s;
+}
+.menu-icon:hover {
+  color: #ff7f50;
+  transform: scale(1.1);
+}
+
+.header-logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 150px;
+}
+body {
+  font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
+  font-size: 22px;
+}
+/* ABOUT US Heading */
+h2 {
+  text-align: center;
+  font-weight: bold;
+  margin: 40px 0 20px;
+  font-size: 2em;
+}
+
+/* BODY 1: Black Banner */
+.body1-wrapper {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center; /* Center the content horizontally if needed */
+  padding: 20px 0; /* Optional padding for spacing */
+}
+
+.body1 {
+  display: flex;
+  max-width: 1200px; /* Limit max width for large screens */
+  width: 100%;
+  align-items: flex-start;
+}
+
+/* Image container - smaller width */
+.category1 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.category1 img {
+  max-width: 100%; /* Smaller width for image to leave space */
+  height: auto;
+  border-radius: 8px; /* Optional rounded corners */
+}
+
+/* Content container - white rectangles on the right, each separated by black background */
+.category2 {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  width: 100%;
+}
+
+/* Individual white rectangles for each section */
+.white-rectangle {
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 20px; /* space between rectangles */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Specific styles for the top rectangle */
+.top-rectangle {
+  /* Additional styles if needed */
+}
+
+/* For the bottom rectangles side by side, with small space and aligned at top */
+.bottom-rectangles {
+  display: flex;
+  justify-content: space-between; /* creates space between the rectangles */
+  align-items: flex-start; /* align at the top */
+  gap: 10px; /* small space between rectangles */
+}
+
+.bottom-left, .bottom-right {
+  width: 48%; /* or adjust as necessary for spacing */
+}
+
+/* Center and style headers inside rectangles, make them bold and same size */
+.white-rectangle h3, .white-rectangle h4 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2em; /* same size for both headers */
+  margin-bottom: 10px;
+}
+
+/* Optional styling for paragraphs inside rectangles */
+p {
+  font-size: 1em;
+}
+
+/* BODY 2 Styles */
+.body2 {
+  background-color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+.body2 h2 {
+  margin-bottom: 20px;
+}
+.body2 p {
+  margin-bottom: 30px;
+}
+.view-gallery {
+  display: inline-block;
+  background-color: orange;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1em;
+  margin-bottom: 30px;
+  transition: background-color 0.3s ease;
+}
+ /* Navigation popup styles */
+  #navPopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.2);
+    transform: translateX(-250px);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    padding-top: 60px;
+  }
+  #navPopup.show {
+    transform: translateX(0);
+  }
+  #navPopup ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  #navPopup li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  #navPopup li a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+  }
+  #navPopup li a.active {
+    background-color: #ff7f50; /* Highlight color */
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 4px;
+  }
+.view-gallery:hover {
+  background-color: #e67e00;
+}
+/* Now, the image will be placed in Body 3 */
+
+/* BODY 3 Styles */
+.body3 {
+  padding: 20px;
+  text-align: center;
+}
+.body3 img {
+  width: 2300%;
+  max-width: 1500px;
+  height: auto;
+  margin-top: 20px;
+
+}
+ /* Footer styles (from your provided code) */
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 20px 10px;
+  background-color: #fff;
+}
+footer a {
+  color: #333;
+  font-size: 24px;
+  margin: 0 15px;
+}
+footer a:hover {
+  color: #ff7f50;
+ transform: scale(1.2);
+ transition: color 0.3s, transform 0.3s;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    font-size: 24px;
+    color: #555;
+    transition: color 0.3s, transform 0.3s;
+  }
+
+  .social-icons a:hover {
+    color: #ff7f50;
+    transform: scale(1.2);
+
+/* Responsive adjustments if needed */
+@media(max-width: 768px) {
+  .body1 {
+    flex-direction: column;
+  }
+  .category1, .category2 {
+    flex: none;
+    width: 100%;
+  }
+  .bottom-rectangles {
+    flex-direction: column;
+  }
+  .bottom-left, .bottom-right {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+</style>

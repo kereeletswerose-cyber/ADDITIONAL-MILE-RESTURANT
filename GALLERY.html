@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Restaurant Gallery</title>
+<link rel="stylesheet" type="text/css" href="GALLERY.css">
+<!-- Font Awesome for social media icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<link rel="stylesheet" type="text/css" href="GALLERY.css">
+</head>
+<body> 
+  
+  <!-- Navigation Popup -->
+<div id="navPopup">
+  <ul>
+    <li><a href="INDEX ORIGINAL.html">Home</a></li>
+    <li><a href="c2.html">Menu</a></li>
+    <li><a href="RESERVATION O.G.html">Reservation</a></li>
+    <li><a href="ABOUT US ORIGINAL.html">About Us</a></li>
+    <li><a href="GALLERY.html" class="active">Gallery</a></li>
+  </ul>
+</div>
+</div>
+<!-- Overlay background -->
+<div id="overlay"></div>
+
+<!-- Header from your provided code -->
+<header>
+  <div class="header-left">
+    <!-- Updated menu icon with Font Awesome -->
+    <div class="menu-icon" id="menuBtn" aria-label="Menu">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
+  <!-- Centered PNG logo image -->
+  <img src="logo.png" alt="Additional mile Logo" class="header-logo"min width=" 150px"/>
+</header>
+
+<!-- White space separator -->
+<div class="header-spacing"></div>
+
+<!-- Gallery Title -->
+<div class="gallery-title">GALLERY</div>
+
+<!-- White space separator -->
+<div class="title-spacing"></div>
+
+<!-- Banner with overlay -->
+<div class="banner">
+  <img src="Wallpaper.JPG" alt="Banner Image" />
+  <div class="banner-rectangle" style="width: 60%; max-width: 600px;">
+    <h1 style="margin:0; font-size:25px;">CULINARY ARTISTRY</h1> 
+    <a href="RESERVATION O.G.html">
+    <button class="cta-button">BOOK NOW</button></a>
+  </div>
+</div>
+
+<!-- Body 2 with black background, divided into 2, touching edges -->
+<div class="body2">
+  <div class="body2-section" style="background-color: black;">
+    <h2>OUR TEAM</h2>
+    <!-- Replacing heading with an image -->
+    <img src="GROUP PHOTO.JPG" alt="Group photo" style="max-width:300px; width:100%;"/>
+  </div>
+  <div class="body2-section" style="background-color: black;">
+    <h2>BEVERAGES</h2>
+    <!-- Replacing heading with an image -->
+    <img src="mocktail 5.JPG" alt="mocktail" style="max-width:300px; width:100%;"/>
+  </div>
+</div>
+
+<!-- White space separator -->
+<div class="body-spacing"></div>
+
+<!-- Body 2 with black background, divided into 2, touching edges -->
+<div class="body2">
+  <div class="body2-section" style="background-color: black;">
+    <h2>SIGNATURE DISH</h2>
+    <!-- Replacing heading with an image -->
+    <img src="food 3.JPG" alt="Signature Dish" style="max-width:300px; width:100%;"/>
+  </div>
+  <div class="body2-section" style="background-color: black;">
+    <h2>DESSERT</h2>
+    <!-- Replacing heading with an image -->
+    <img src="dessert 5.JPG" alt="Dessert" style="max-width:300px; width:100%;"/>
+  </div>
+</div>
+
+<!-- Spacer before footer -->
+<div class="footer-spacing"></div>
+
+<!-- Footer with social media icons -->
+<footer>
+  <div class="social-icons">
+    <a href="https://facebook.com/login" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+    <a href="https://instagram.com/accounts/login" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+    <a href="https://twitter.com/login" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+    <a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</footer>
+<!-- JavaScript for toggle menu -->
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const navPopup = document.getElementById('navPopup');
+  const overlay = document.getElementById('overlay');
+
+  menuBtn.addEventListener('click', () => {
+    navPopup.classList.toggle('show');
+    overlay.classList.toggle('show');
+  });
+
+  overlay.addEventListener('click', () => {
+    navPopup.classList.remove('show');
+    overlay.classList.remove('show');
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,230 @@
+<style>
+body {
+  margin: 0;
+  font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
+  font-size: 22px;
+}
+</style>
+  /* HEADER with centered logo and icons */
+  header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #fff;
+  }
+
+  /* Hamburger menu icon on the left */
+  .menu-icon {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+  }
+  .menu-icon:hover {
+    color: #ff7f50;
+    transform: scale(1.1);
+  }
+
+  /* Sign-in icon container on the right */
+  .signin-container {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .signin-container:hover {
+    
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  }
+
+  /* Center logo styling with fade-in animation */
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+  .logo img {
+    height: 50px;
+  }
+
+  /* Banner section with slide-in animation */
+  .banner-container {
+    position: relative;
+    overflow: hidden;
+  }
+  .banner-image {
+    width: 100%;
+    display: block;
+    animation: slideIn 1s forwards;
+  }
+
+  /* New Arrival Section with fade-in */
+  .new-arrival {
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in;
+  }
+
+  .new-arrival h2 {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  /* Container for items with fade-in */
+  .items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    animation: fadeIn 1s ease-in;
+  }
+
+  /* Individual item card with hover animation */
+  .item-card {
+    width: 180px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  .item-image {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+  }
+
+  .item-info {
+    padding: 10px;
+    font-family: monospace;
+    font-size: 14px;
+    text-align: center;
+    transition: color 0.3s;
+  }
+
+  /* Footer styles with fade-in and hover effects */
+  .footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px 10px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    animation: fadeIn 1s ease-in;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .social-icons a {
+    font-size: 24px;
+    color: #555;
+    transition: color 0.3s, transform 0.3s;
+  }
+
+  .social-icons a:hover {
+    color: #ff7f50;
+    transform: scale(1.2);
+  }
+
+  
+  /* Navigation popup styles */
+  #navPopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.2);
+    transform: translateX(-250px);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    padding-top: 60px;
+  }
+  #navPopup.show {
+    transform: translateX(0);
+  }
+  #navPopup ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  #navPopup li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  #navPopup li a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+  }
+  #navPopup li a.active {
+    background-color: #ff7f50; /* Highlight color */
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 4px;
+  }
+
+  /* Overlay background with fade-in */
+  #overlay {
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+  }
+  #overlay.show {
+    opacity: 1;
+    visibility: visible;
+    animation: fadeIn 0.3s;
+  }
+
+  /* Additional styles for sign-in dropdown with fade-in */
+  .signin-dropdown {
+    display: none;
+  }
+
+  /* Responsive adjustments with fade-in */
+  @media(max-width: 768px){
+    .items-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .item-card {
+      width: 80%;
+    }
+  }
+
+  /* Keyframes for animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+  }
+</style>

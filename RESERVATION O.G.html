@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Additional Mile</title>
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<link rel="stylesheet" type="text/css" href="Reservation O.G.css">
+</head>
+<body>
+
+<!-- Navigation Popup -->
+<div id="navPopup">
+  <ul>
+    <li><a href="INDEX ORIGINAL.html">Home</a></li>
+    <li><a href="c2.html">Menu</a></li>
+    <li><a href="RESERVATION O.G.html" class="active">Reservation</a></li>
+    <li><a href="ABOUT US ORIGINAL.html">About Us</a></li>
+    <li><a href="GALLERY.html">Gallery</a></li>
+  </ul>
+</div>
+<!-- Overlay background -->
+<div id="overlay"></div>
+
+<!-- Header -->
+<header>
+  <div class="menu-icon" id="menuBtn">
+    <i class="fas fa-bars"></i>
+  </div>
+  <!-- Centered PNG logo image -->
+  <img src="logo.png" alt="Additional mile Logo" class="header-logo"min width=" 150px" />
+  <!-- Sign-in icon removed -->
+</header>
+
+<!-- Banner -->
+<div class="banner-container" style="position: relative; display: inline-block;">
+  <img src="BANNER- RESERV...JPG" alt="Burger Banner" class="banner-image" width="1200" height="600" />
+  <!-- White rectangle overlay centered on banner -->
+  <div style="
+    position: absolute;
+    top: 50%;
+    left: 59.9%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+  ">
+    <!-- Paragraph inside white rectangle -->
+    <h2>WHY DINE WITH US?</h2>
+    <p class="quote">"Because 'good enough' isn't on our menu. We go the Additional Mile for a taste that's worth the trip."</p>
+  </div>
+</div>
+
+<!-- Dine With Us Section -->
+
+<!-- Reserve Your Spot Section -->
+<h2 style="text-align:center; font-weight:bold;">RESERVE YOUR SPOT</h2>
+
+<!-- Booking Form with border -->
+<div class="reservation">
+
+    <div class="border-container">
+
+      <!-- Form -->
+      <form class="booking-form">
+        <!-- First Row: Full Name and Date -->
+        <div class="form-row">
+          <div class="column">
+            <label for="fullname">FULL NAME:</label>
+            <input type="text" id="fullname" name="fullname" />
+          </div>
+          <div class="column">
+            <label for="date">DATE:</label>
+            <input type="date" id="date" name="date" />
+          </div>
+        </div>
+
+        <!-- Second Row: Time side by side with space -->
+        <div class="time-row">
+          <div class="time-column">
+            <label for="time">TIME:</label>
+            <input type="time" id="time" name="time" />
+          </div>
+          <div class="space"></div>
+        </div>
+
+        <!-- Third Row: Number of Guest and Special Requests -->
+        <div class="form-row">
+          <div class="column">
+            <label for="guests">NUMBER OF GUEST:</label>
+            <input type="number" id="guests" name="guests" />
+          </div>
+          <div class="column">
+            <label for="requests">Special Requests (Optional):</label>
+            <textarea id="requests" name="requests" rows="4"></textarea>
+          </div>
+        </div>
+      </form>
+
+      <!-- Terms and Conditions rectangle -->
+      <div class="border-container">
+        <h3>Terms and Conditions</h3>
+        <p>
+          By confirming your reservation, you agree to our terms: tables are held for 15 minutes, a 2-hour cancellation notice is required with a P50 fee per person for cancellations, table allocation is 1.5-2 hours maximum, and please call if running late.
+        </p>
+      </div>
+    </div>
+    <style>
+body {
+  margin: 0;
+  font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
+  font-size: 22px;
+}
+</style>
+
+ <!-- Call to Action Button at bottom right -->
+<div class="form-and-button">
+  <button class="confirm-btn" onclick="showConfirmation()">CONFIRM</button>
+</div>
+
+<script>
+function showConfirmation() {
+  alert("RESERVATION CONFIRMED");
+}
+</script>
+
+<style>
+/* Optional: Style for glowing green text if you want to display it inline instead of alert */
+.glowing-text {
+  color: #00ff00;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+}
+</style>
+
+  </div>
+</div>
+
+<!-- Footer with social media icons -->
+<footer>
+  <div class="social-icons">
+    <a href="https://facebook.com/login" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+    <a href="https://instagram.com/accounts/login" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+    <a href="https://twitter.com/login" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+    <a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</footer>
+<!-- JavaScript for toggle menu -->
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const navPopup = document.getElementById('navPopup');
+  const overlay = document.getElementById('overlay');
+
+  menuBtn.addEventListener('click', () => {
+    navPopup.classList.toggle('show');
+    overlay.classList.toggle('show');
+  });
+
+  overlay.addEventListener('click', () => {
+    navPopup.classList.remove('show');
+    overlay.classList.remove('show');
+  });
+
+</script>
+
+
+</body>
+</html>

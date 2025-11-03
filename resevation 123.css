@@ -1,0 +1,109 @@
+</style>
+</head>
+<body>
+
+<!-- Navigation Popup -->
+<div id="navPopup">
+  <ul>
+    <li><a href="#" class="active">Home</a></li>
+    <li><a href="#">Menu</a></li>
+    <li><a href="#">Reservation</a></li>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Gallery</a></li>
+  </ul>
+</div>
+<!-- Overlay background -->
+<div id="overlay"></div>
+
+<!-- Header -->
+<header>
+  <div class="header-left">
+    <div class="menu-icon" id="menuBtn" aria-label="Menu">&#9776;</div>
+  </div>
+  <!-- Centered PNG logo image -->
+  <img src="logo.png" alt="Additional mile Logo" class="header-logo" />
+</header>
+
+<!-- Banner Image -->
+<img src="NANDOS.JPEG" class="banner" />
+
+<!-- Dine With Us Section -->
+<h2>WHY DINE WITH US?</h2>
+<p class="quote">"Because 'good enough' isn't on our menu. We go the Additional Mile for a taste that's worth the trip."</p>
+
+<!-- Reserve Your Spot Section -->
+<h2 style="text-align:center; font-weight:bold;">RESERVE YOUR SPOT</h2>
+
+<!-- Booking Form Section -->
+<div class="reservation">
+  <!-- The original structure without wrapping -->
+  <!-- Existing form -->
+  <form class="booking-form">
+    <!-- First Row: Full Name and Date -->
+    <div class="form-row">
+      <div class="column">
+        <label for="fullname">FULL NAME:</label>
+        <input type="text" id="fullname" name="fullname" />
+      </div>
+      <div class="column">
+        <label for="date">DATE:</label>
+        <input type="date" id="date" name="date" />
+      </div>
+    </div>
+
+    <!-- Second Row: "Time" side by side with blank space -->
+    <div class="time-row">
+      <div class="time-column">
+        <label for="time">TIME:</label>
+        <input type="time" id="time" name="time" />
+      </div>
+      <div class="space"></div>
+      <div class="column"></div>
+    </div>
+
+    <!-- Third Row: Number of Guest and blank space -->
+    <div class="form-row">
+      <div class="column">
+        <label for="guests">NUMBER OF GUEST:</label>
+        <input type="number" id="guests" name="guests" />
+      </div>
+      <div class="column"></div>
+    </div>
+  </form>
+
+  <!-- Terms rectangle -->
+  <div class="terms-box">
+    <h3>Terms and Conditions</h3>
+    <p>
+      By confirming your reservation, you agree to our terms: tables are held for 15 minutes, a 2-hour cancellation notice is required with a P50 fee per person for cancellations, table allocation is 1.5-2 hours maximum, and please call if running late.
+    </p>
+  </div>
+</div>
+
+<!-- Footer with social icons -->
+<div class="footer">
+  <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+  <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+  <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+  <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+</div>
+
+<!-- JavaScript for toggle menu -->
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const navPopup = document.getElementById('navPopup');
+  const overlay = document.getElementById('overlay');
+
+  menuBtn.addEventListener('click', () => {
+    navPopup.classList.toggle('show');
+    overlay.classList.toggle('show');
+  });
+
+  overlay.addEventListener('click', () => {
+    navPopup.classList.remove('show');
+    overlay.classList.remove('show');
+  });
+</script>
+
+</body>
+</html>

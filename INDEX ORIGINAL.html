@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Additional Smile Restaurant</title>
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<!-- Your CSS -->
+<link rel="stylesheet" type="text/css" href="INDEX ORIGINAL CSS.css">
+</head>
+<body>
+<!-- Navigation Popup -->
+<div id="navPopup">
+  <ul>
+    <li><a href="INDEX ORIGINAL.html" class="active" >Home</a></li>
+    <li><a href="c2.html">Menu</a></li>
+    <li><a href="RESERVATION O.G.html">Reservation</a></li>
+    <li><a href="ABOUT US ORIGINAL.html">About Us</a></li>
+    <li><a href="GALLERY.html">Gallery</a></li>
+  </ul>
+</div>
+<!-- Overlay background -->
+<div id="overlay"></div>
+
+<!-- Header with centered logo and icons -->
+<header style="display: flex; justify-content: center; align-items: center; padding: 10px 20px; background-color:#fff; position: relative;">
+  <!-- Hamburger menu icon on the left -->
+  <div class="menu-icon" id="menuBtn" style="position: absolute; left: 20px;">
+    <i class="fas fa-bars"></i>
+  </div>
+  <!-- Sign-in icon on the right -->
+  <div class="signin-container" id="signinContainer" style="position: absolute; right: 20px; top: 15px; cursor: pointer;">
+    <i class="fas fa-user-circle" style="font-size:24px;"></i>
+    <!-- Dropdown form -->
+    <div class="signin-dropdown" id="signinDropdown" style="display: none; position: absolute; right: 0; top: 40px; background: #fff; border: 1px solid #ddd; padding: 10px; border-radius: 4px; width: 250px; box-shadow: 0 2px 4px rgba(0,0,0,0.2); z-index: 1001;">
+      <form id="signInForm">
+        <label for="email" style="display:block; margin-bottom:8px;">Email:</label>
+        <input type="email" id="email" name="email" style="width: 100%; padding:8px; margin-bottom:10px; border: 1px solid #ccc; border-radius: 4px;" required />
+        <button type="submit" style="width: 100%; padding:10px; background-color:#ff7f50; color:#fff; border:none; border-radius:4px; cursor:pointer;">Submit</button>
+      </form>
+    </div>
+  </div>
+  <!-- Centered logo -->
+  <div class="logo">
+    <img src="logo.PNG" alt="Logo" class="header-logo"min width=" 150px"/>
+  </div>
+</header>
+
+<!-- Banner -->
+<div class="banner-container">
+  <img src="NANDOS.JPEG" alt="Burger Banner" class="banner-image" width="1200" height="600" />
+  <!-- Overlay text on banner -->
+  <div class="banner-text"></div>
+</div>
+
+<!-- New Arrival Section -->
+<div class="new-arrival">
+  <h2>NEW ARRIVAL</h2>
+  <div class="items-container">
+    <!-- First Item -->
+    <div class="item-card">
+      <img src="chicken.png" alt="14 Chicken, Chips & Salad" class="item-image" />
+      <div class="item-info">
+        1/4 CHICKEN, CHIPS & SALAD<br>
+        <strong>P89.00</strong>
+      </div>
+    </div>
+    <!-- Second Item -->
+    <div class="item-card">
+      <img src="Mocktail.png" alt="Variety of Mocktail" class="item-image" />
+      <div class="item-info">
+        VARIETY OF MOCKTAIL<br>
+        <strong>P49.00</strong>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+body {
+  margin: 0;
+  font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
+  font-size: 22px;
+}
+</style>
+<!-- Footer with social media icons -->
+<footer>
+  <div class="social-icons">
+    <a href="https://facebook.com/login" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+    <a href="https://instagram.com/accounts/login" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+    <a href="https://twitter.com/login" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+    <a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</footer>
+
+<!-- JavaScript for toggle menu and sign-in dropdown -->
+<script>
+  // Hamburger menu toggle
+  const menuBtn = document.querySelector('.menu-icon');
+  const navPopup = document.getElementById('navPopup');
+  const overlay = document.getElementById('overlay');
+
+  menuBtn.addEventListener('click', () => {
+    navPopup.classList.toggle('show');
+    overlay.classList.toggle('show');
+  });
+
+  overlay.addEventListener('click', () => {
+    navPopup.classList.remove('show');
+    overlay.classList.remove('show');
+  });
+
+  // Sign-in dropdown toggle
+  const signinContainer = document.getElementById('signinContainer');
+  const signinDropdown = document.getElementById('signinDropdown');
+
+  signinContainer.addEventListener('click', () => {
+    if (signinDropdown.style.display === 'block') {
+      signinDropdown.style.display = 'none';
+    } else {
+      signinDropdown.style.display = 'block';
+    }
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!signinContainer.contains(e.target)) {
+      signinDropdown.style.display = 'none';
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Additional Mile</title>
+<!-- Font Awesome for social icons and menu icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<link rel="stylesheet" type="text/css" href="menu.css">
+<link rel="stylesheet" type="text/css" href="c2.css">
+</head>
+<body>
+
+<!-- Navigation Popup -->
+<div id="navPopup">
+  <ul>
+    <li><a href="INDEX ORIGINAL.html" >Home</a></li>
+    <li><a href="c2.html" class="active">Menu</a></li>
+    <li><a href="RESERVATION O.G.html">Reservation</a></li>
+    <li><a href="ABOUT US ORIGINAL.html">About Us</a></li>
+    <li><a href="GALLERY.html">Gallery</a></li>
+  </ul>
+</div>
+<!-- Overlay background -->
+<div id="overlay"></div>
+
+<!-- Header with Hamburger Menu -->
+<header>
+  <div class="menu-icon" id="menuBtn">
+    <i class="fas fa-bars"></i>
+  </div>
+  <div class="logo">
+    <img src="logo.PNG" alt="Logo"  class="header-logo"min width=" 150px" />
+  </div>
+</header>
+
+<!-- Banner -->
+<div class="banner-container">
+  <img src="burger banner.JPG" alt="Burger Banner" class="banner-image" width="1200" height="600" />
+  <!-- Overlay text on banner -->
+  <div class="banner-text">
+    <h2>VISUAL STORIES FROM OUR KITCHEN AND DINING ROOM</h2>
+  </div>
+  <!-- Call to Action Button -->
+  <a href="RESERVATION O.G.html">
+    <button class="cta-button">BOOK NOW</button>
+  </a>
+</div>
+
+<!-- Main heading below banner, in uppercase and bold -->
+<h1 class="main-heading">OUR MENU</h1>
+
+<!-- Wrap all menu sections in this container for centered layout with equal side margins -->
+<div class="menu-container">
+<style>
+  /* Optional: Add some basic styles for clarity */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .section {
+    margin-bottom: 20px;
+  }
+  h3 {
+  font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  margin-bottom: 10px;
+  text-align: left; /* ensure left alignment */
+  padding-left: 20px; /* align with paragraphs */
+}
+  a {
+    text-decoration: underline;
+    color: black;
+    display: block;
+    margin-bottom: 5px;
+  }
+  a:hover {
+    color: orange; /* Hover color set to orange */
+  }
+</style>
+</head>
+<body>
+
+<!-- Upgrades and Chicken side by side -->
+<div style="display: flex; justify-content: space-between;">
+  <div class="section" style="flex: 1; margin-right: 10px;">
+    <h3>UPGRADES</h3>
+    <a href="RESERVATION O.G.html">
+      <p>Make it a Large Combo                    (+P25)</p>
+    </a>
+    <a href="RESERVATION O.G.html">
+      <p>Swap Fries for Onion Rings (+P20)</p>
+    </a>
+    <a href="RESERVATION O.G.html">
+      <p>Add a Cookie or Shake (+P25)</p>
+    </a>
+  </div>
+  <div class="section" style="flex: 1; margin-left: 10px;">
+    <h3>CHICKEN BURGER COMBOS</h3>
+    <a href="RESERVATION O.G.html">
+      <p>Deal Combo - Chicken Sandwich, Fries & Drink | P99</p>
+    </a>
+    <a href="RESERVATION O.G.html">
+      <p>Value Combo - Chicken Sandwich, Fries & Drink | P99</p>
+    </a>
+  </div>
+</div>
+
+<!-- Mocktails and Chicken side by side -->
+<div style="display: flex; justify-content: space-between;">
+  <div class="section" style="flex: 1; margin-right: 10px;">
+    <h3>MOCKTAILS</h3>
+    <a href="RESERVATION O.G.html">
+      <p>Berry Bliss - Mixed berries, mint & soda | P85</p>
+    </a>
+    <a href="RESERVATION O.G.html">
+      <p>Tropical Breeze - Mango, passion fruit & lime | P105</p>
+    </a>
+    <a href="RESERVATION O.G.html">
+      <p>Virgin Mojito - Fresh mint, lime & soda | P32</p>
+    </a>
+  </div>
+  <div class="section" style="flex: 1; margin-left: 10px;">
+    <h3>CHICKEN BURGER COMBOS</h3>
+    <a href="RESERVATION O.G.html">
+      <p>Deal Combo - Chicken Sandwich, Fries & Drink | P99</p>
+    </a>
+    <a href="RESERVATION O.G.html">
+      <p>Value Combo - Chicken Sandwich, Fries & Drink | P99</p>
+    </a>
+  </div>
+</div>
+
+<!-- Footer with social media icons -->
+<footer>
+
+  <div class="social-icons">
+    <a href="https://facebook.com/johndoe" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+    <a href="https://instagram.com/johndoe" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+    <a href="https://twitter.com/johndoe" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+    <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>  
+  </div> 
+
+
+</footer>
+
+<!-- JavaScript for toggle menu -->
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const navPopup = document.getElementById('navPopup');
+  const overlay = document.getElementById('overlay');
+
+  menuBtn.addEventListener('click', () => {
+    navPopup.classList.toggle('show');
+    overlay.classList.toggle('show');
+  });
+
+  overlay.addEventListener('click', () => {
+    navPopup.classList.remove('show');
+    overlay.classList.remove('show');
+  });
+</script>
+
+</body>
+</html>

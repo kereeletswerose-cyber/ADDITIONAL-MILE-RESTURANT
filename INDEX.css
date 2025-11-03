@@ -1,0 +1,104 @@
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+  }
+
+  /* Header styles */
+/* Center the logo inside the header */
+.header-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+  /* Header left with menu icon */
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Hamburger menu icon */
+  .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  /* Logo image (centered) */
+  .logo {
+    height: 50px;
+  }
+
+  /* Sign in icon */
+  .sign-in {
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  /* Make the banner image stretch edge-to-edge responsively */
+.banner-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+  /* "NEW ARRIVAL" Title with space above and below */
+  h2 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 40px 0 20px 0; /* space above and below */
+  }
+
+  /* Container for items */
+  .items-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  /* Individual item style */
+  .item {
+    width: 180px;
+    text-align: center;
+  }
+
+  /* Item images */
+  .item img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Item caption and price */
+  .item p {
+    margin: 8px 0 4px 0;
+  }
+
+  /* Price style */
+  .price {
+    font-weight: bold;
+  }
+
+  /* Footer social icons */
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .social-icons a {
+    font-size: 24px;
+    color: #555;
+    transition: 0.3s;
+  }
+
+  .social-icons a:hover {
+    color: #000;
+  }
+</style>

@@ -1,0 +1,182 @@
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  background-color: #fff;
+  font-size: 16px; /* Base font size */
+}
+
+/* HEADER */
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #fff;
+}
+
+/* Hamburger menu */
+.menu-icon {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.menu-icon:hover {
+  color: #ff7f50;
+  transform: scale(1.1);
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo img {
+  height: 50px;
+}
+
+/* Banner section */
+.banner-container {
+  position: relative;
+}
+.banner-image {
+  width: 100%;
+  display: block;
+}
+/* Overlay text on banner */
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+.banner-text h2 {
+  font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  margin: 0 0 10px 0;
+}
+/* Call to action button positioned at bottom right of banner */
+.cta-button {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  padding: 12px 24px;
+  background-color: #ff7f50;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Heading below banner */
+.main-heading {
+  font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-weight: bold;
+  font-size: 28px;
+  margin: 40px 20px 20px 20px;
+  text-transform: uppercase;
+}
+
+/* Body 2 - sections side by side */
+.section-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+.section {
+  flex: 1 1 45%;
+  min-width: 300px;
+  margin: 10px;
+  padding: 10px;
+}
+h3 {
+  font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+p {
+  font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #f0f0f0;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+.social-icons a {
+  margin: 0 15px;
+  font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Navigation popup styles */
+#navPopup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 2px 0 12px rgba(0,0,0,0.2);
+  transform: translateX(-250px);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  padding-top: 60px;
+}
+#navPopup.show {
+  transform: translateX(0);
+}
+#navPopup ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#navPopup li {
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+}
+#navPopup li a {
+  text-decoration: none;
+  color: #333;
+  font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+#navPopup li a.active {
+  background-color: #ff7f50; /* Highlight color */
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+
+/* Overlay background when menu is open */
+#overlay {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+#overlay.show {
+  opacity: 1;
+  visibility: visible;
+}

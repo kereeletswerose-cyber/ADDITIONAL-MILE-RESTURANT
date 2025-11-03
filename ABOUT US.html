@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Additional Mile - About Us</title>
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<link rel="stylesheet" type="text/css" href="ABOUT US.css">
+</head>
+<body> 
+
+<!-- Navigation Popup -->
+<div id="navPopup">
+</div>
+<!-- Overlay background -->
+<div id="overlay"></div>
+
+<!-- Header from your provided code -->
+<header>
+  <div class="header-left">
+    <div class="menu-icon" id="menuBtn" aria-label="Menu">&#9776;</div>
+  </div>
+  <!-- Centered PNG logo image -->
+  <img src="logo.png" alt="Additional mile Logo" class="header-logo" />
+</header>
+
+<!-- ABOUT US Heading -->
+<h2>ABOUT US</h2>
+
+<!-- BODY 1 WITHIN BLACK BACKGROUND -->
+<div class="body1-wrapper">
+  <div class="body1">
+    <!-- CATEGORY 1: Image -->
+    <div class="category1">
+      <img src="R.PNG" alt="Category Image" />
+    </div>
+    <!-- CATEGORY 2: Content in separate white rectangles -->
+    <div class="category2">
+      <!-- Top rectangle -->
+      <div class="white-rectangle top-rectangle">
+        <h3>OUR PHILOSOPHY</h3>
+        <p>
+          Addition Mile was founded by Chef S. Poo who sought to create an exceptional dining experience. The restaurant's name reflects core philosophy: gaining an extra mile in every aspect.
+        </p>
+      </div>
+      <!-- Bottom rectangles, side by side, each in its own white rectangle -->
+      <div class="bottom-rectangles">
+        <div class="white-rectangle bottom-left">
+          <h4>OUR VISION</h4>
+          <p>
+            To nourish our guests with exceptional food and service, fostering a sense of community and connection. We strive to create lasting memories through our inviting atmosphere and dedication to excellence.
+          </p>
+        </div>
+        <div class="white-rectangle bottom-right">
+          <h4>OUR MISSION</h4>
+          <p>
+            To be more than a restaurant; to be a vibrant hub where people gather, connect, and celebrate. We aim to deliver outstanding food and genuine care, exceeding expectations.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BODY 2 START -->
+<div class="body2">
+  <h2>MEET OUR TEAM</h2>
+  <p>
+    Our team is dedicated to providing you with the best dining experience. Meet the passionate people behind our success.
+  </p>
+  <a class="view-gallery" href="GALLERY.html">VIEW GALLERY</a>
+  <!-- Removed image from Body 2 as per your instructions -->
+</div>
+<!-- BODY 2 END -->
+
+<!-- BODY 3: New section for the image moved from Body 2 -->
+<div class="body3">
+  <img src="IN THE KITCH.JPG" alt="Our Team" />
+</div>
+
+<!-- Footer with social media icons -->
+<footer>
+  <div class="social-icons">
+    <a href="https://facebook.com/login" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+    <a href="https://instagram.com/accounts/login" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+    <a href="https://twitter.com/login" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+    <a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</footer>
+<!-- JavaScript for toggle menu -->
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const navPopup = document.getElementById('navPopup');
+  const overlay = document.getElementById('overlay');
+
+  menuBtn.addEventListener('click', () => {
+    navPopup.classList.toggle('show');
+    overlay.classList.toggle('show');
+  });
+
+  overlay.addEventListener('click', () => {
+    navPopup.classList.remove('show');
+    overlay.classList.remove('show');
+  });
+</script>
+</footer>
+
+</body>
+</html>

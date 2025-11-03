@@ -1,0 +1,200 @@
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+  }
+
+  /* HEADER with centered logo and icons */
+  header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #fff;
+  }
+
+  /* Hamburger menu icon on the left */
+  .menu-icon {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  /* Sign-in icon container on the right */
+  .signin-container {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+  }
+
+  /* Center logo styling */
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo img {
+    height: 50px;
+  }
+
+  /* Banner section */
+  .banner-container {
+    position: relative;
+  }
+  .banner-image {
+    width: 100%;
+    display: block;
+  }
+
+  /* New Arrival Section */
+  .new-arrival {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .new-arrival h2 {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  /* Container for items */
+  .items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  /* Individual item card */
+  .item-card {
+    width: 180px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #fff;
+  }
+
+  .item-image {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+  }
+
+  .item-info {
+    padding: 10px;
+    font-family: monospace;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  /* Footer styles with centered social media icons */
+  .footer {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    padding: 20px 10px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center; /* Center icons within the container */
+  }
+
+  .social-icons a {
+    font-size: 24px;
+    color: #555;
+    transition: 0.3s;
+  }
+
+  .social-icons a:hover {
+    color: #000;
+  }
+
+  /* Navigation popup styles */
+  #navPopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.2);
+    transform: translateX(-250px);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    padding-top: 60px;
+  }
+
+  #navPopup.show {
+    transform: translateX(0);
+  }
+
+  #navPopup ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #navPopup li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  #navPopup li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+  }
+
+  #navPopup li a.active {
+    background-color: #ff7f50;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 4px;
+  }
+
+  /* Overlay background when menu is open */
+  #overlay {
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+  }
+
+  #overlay.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Additional styles for sign-in dropdown */
+  .signin-dropdown {
+    display: none;
+  }
+
+  /* Responsive adjustments */
+  @media(max-width: 768px){
+    .items-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .item-card {
+      width: 80%;
+    }
+  }
+</style>

@@ -1,0 +1,291 @@
+<style>
+ /* Reset some default styles */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+  }
+
+  /* Header styles */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    position: relative;
+  }
+  
+  /* Left side: hamburger menu */
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+
+  }
+.menu-icon:hover {
+  color: #ff7f50;
+  transform: scale(1.1);
+  }
+  .header-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); {
+  display: block;
+  margin: 0 auto;
+  max-width: 150px;
+}
+  /* Spacer after header */
+  .header-spacing {
+    height: 20px;
+  }
+  object-fit: contain; /* ensure image scales properly */
+  }
+
+  /* Banner section */
+  .banner-container {
+    position: relative;
+    margin-top: 25px;
+  }
+  .banner-image {
+    width: 150%;
+    display: block;
+  }
+
+  /* Content styles */
+h2 {
+  text-align: center;
+  font-size: 24px;
+  margin: 20px 0 10px 0;
+}
+
+.quote {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+/* Reservation section */
+.reservation {
+  max-width: 1000px;
+  margin: 0 auto 40px auto;
+  padding: 0 20px;
+}
+.reservation h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Two-column layout for forms */
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+input[type="email"],
+textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Remove all shadows below rectangles in reservation form - no rectangles now */
+.rectangle {
+  /* no styles as rectangles are removed */
+}
+
+/* Specific styling for the "Time" row to have side by side with space */
+.time-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.time-column {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+
+.space {
+  width: 48%;
+}
+
+/* New style: Border container around form fields and terms */
+.border-container {
+  border: 2px solid black;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #fff; /* Optional: make background white inside border */
+}
+
+/* Wrap the border container with spacing to leave space between border and footer */
+.border-wrapper {
+  margin-bottom: 50px; /* space between border end and footer */
+}
+
+/* Touching the far left and right of the border, so the rectangle (terms) inside the container is full width */
+.terms-box {
+  background-color: #fff; /* white background */
+  border: 2px solid #000; /* black stroke */
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 4px;
+  box-shadow: none;
+  width: 100%;
+  box-sizing: border-box;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Small space between the terms box and border container bottom */
+.terms-box {
+  margin-bottom: 10px; /* small space */
+}
+
+/* Position the form fields inside the border container */
+.form-fields {
+  /* no special styles needed, just structure */
+}
+
+/* Styling for the call to action button at bottom right */
+.form-and-button {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+/* Styling for the confirm button */
+.confirm-btn {
+  background-color: orange;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.confirm-btn:hover {
+  background-color: #ff8c00;
+}
+
+
+  /* Footer styles */
+  footer {
+  .footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px 10px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    animation: fadeIn 1s ease-in;
+  }
+
+    display: flex;
+    justify-content: center;
+  }
+  .social-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .social-icons a {
+    font-size: 24px;
+    color: #555;
+    transition: color 0.3s, transform 0.3s;
+  }
+
+  .social-icons a:hover {
+    color: #ff7f50;
+    transform: scale(1.2);
+  }
+/* Navigation popup styles */
+  #navPopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.2);
+    transform: translateX(-250px);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    padding-top: 60px;
+  }
+
+  #navPopup.show {
+    transform: translateX(0);
+  }
+
+  #navPopup ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #navPopup li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  #navPopup li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+  }
+
+   /* Highlight active link */
+  #navPopup li a.active {
+    background-color: #ff7f50; /* Highlight color */
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 4px;
+  }
+
+  /* Overlay background when menu is open */
+  #overlay {
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+</style>
